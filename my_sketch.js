@@ -32,9 +32,9 @@ function draw() {
   //image(oval_img, width/2, height/2);
 
   image(mount_img, 0, height-(364/2), 748/2, 364/2);
-  image(mount_img, width-748/2, height-364/2, 748/3, 364/3);
-  image(mount_img, 400, height-200, 748/2, 364/2);
-  image(mount_img, width-900, height-100, 748/4, 364/4);
+  image(mount_img, width-748/2, height-350, 748*0.8, 364*0.8);
+  image(mount_img, 200, height-200, 748/2, 364/2);
+  image(mount_img, width-400, height-100, 748*0.7, 364*0.7);
 
   snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
 
