@@ -36,12 +36,11 @@ function draw() {
 
   let my_string = time_array[0] + " : " + time_array[1] + " : " + time_array[2] + " : " + time_array[3];
 
-  let word_string = "days  hours  mins  secs";
+  
 
   textSize(38);
   text(my_string, width/2, height/2);
-  textSize(25);
-  text(word_string, width/2, height/2+50);
+
 
 
 }
