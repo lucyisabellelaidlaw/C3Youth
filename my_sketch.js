@@ -23,7 +23,7 @@ function draw() {
   background(color(68,91,214));
 
   button = createButton('REGO HERE');
-  button.position(width/2-50, height/2+200);
+  button.position(mouseX-50, height/2+200);
   button.size(100, 30);
   button.mousePressed(goToLink);
   button.style('background-color', '#46FA80');
