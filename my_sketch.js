@@ -22,6 +22,13 @@ function draw() {
 
   background(color(68,91,214));
 
+  button = createButton('REGO HERE');
+  button.position(width/2, height/2+200);
+  button.size(100, 30);
+  button.mousePressed(goToLink);
+  button.style('background-color', '#46FA80');
+  button.style('color', '#445BD6');
+
   let s = second();
   let m = minute();
   let h = hour();
@@ -146,4 +153,8 @@ function snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedAr
     image(img, snowFlakeXPosArray[i], ((snowFlakeYPosArray[i]-100)+frameCount*snowFlakeSpeedArray[i])%(height+100), size, size);
   }
 
+}
+
+function goToLink() {
+  window.open("https://c3syd.brushfire.com/wintercamp/467720");
 }
