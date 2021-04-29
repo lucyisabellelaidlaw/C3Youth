@@ -6,5 +6,13 @@ function setup() {
   // Top-left corner of the img is at (0, 0)
   // Width and height are the img's original width and height
   createCanvas(windowWidth, windowHeight);
-  image(img, 0, 0, 960, 274);
+  image(img, 0, height/2-(549)/2);
+  background(color(68,91,214));
+  noLoop();
+}
+
+function draw() {
+
+
+
 }
