@@ -46,10 +46,11 @@ function draw() {
 
   let my_string = time_array[0] + ":" + time_array[1] + ":" + time_array[2] + ":" + time_array[3];
 
-
   fill(color(70, 250, 128));
   text(my_string, width/2, height/2);
 
+  textSize(20);
+  text("days till winter camp.", width/2, height/2+30);
 
 
 
