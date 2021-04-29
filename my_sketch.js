@@ -36,7 +36,7 @@ function draw() {
   fill(255);
   let time_array = getTimeDifference(mo, d, h, m, s);
 
-  let my_string = time_array[0] + " : " + time_array[1] + ": " + time_array[2] + " : " + time_array[3];
+  let my_string = time_array[0] + ":" + time_array[1] + ":" + time_array[2] + ":" + time_array[3];
 
 
 
