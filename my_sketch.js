@@ -1,6 +1,6 @@
 let snow_y = 0;
 
-let snowFlakeSizeArray = [5, 10, 5, 20, 10, 10, 20, 20, 30, 50, 10, 10, 5, 20, 10, 10, 5, 5, 30, 10];
+let snowFlakeSizeArray = [10, 20, 10, 40, 20, 20, 40, 40, 60, 70, 10, 20, 10, 40, 20, 20, 10, 10, 60, 20];
 
 
 function setup() {
@@ -40,9 +40,7 @@ function draw() {
   textSize(25);
   text(word_string, width/2, height/2+50);
 
-  //Snowflake Time
 
-  
 }
 
 function getTimeDifference(mo, d, h, m , s) {
