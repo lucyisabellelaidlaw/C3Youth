@@ -32,7 +32,7 @@ function draw() {
   //image(oval_img, width/2, height/2);
 
   image(mount_img, 0, height-(364/2), 748/2, 364/2);
-  image(moung_img, width-748/2, height-364/2, 748/3, 364/3);
+  image(mount_img, width-748/2, height-364/2, 748/3, 364/3);
   image(mount_img, 400, height-200, 748/2, 364/2);
   image(mount_img, width-900, height-100, 748/4, 364/4);
 
