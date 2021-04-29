@@ -1,11 +1,11 @@
 let snow_y = 0;
 
-let snowFlakeSizeArray = [10, 20, 10, 40, 20, 20, 40, 40, 60, 70, 10, 20, 10, 40, 20, 20, 10, 10, 60, 20];
+let snowFlakeSizeArray = [10, 35, 10, 40, 20, 20, 10, 40, 10, 35, 10, 20, 10, 40, 20, 20, 10, 10, 60, 20];
 
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
-
+  angleMode(DEGREES);
   img = loadImage('white_snowflake.png');
 }
 
@@ -129,6 +129,7 @@ function snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedAr
   fill(255);
   for(let i = 0; i < 20; i++) {
     size = snowFlakeSizeArray[i];
+    rotate(frameCount%360);
     image(img, snowFlakeXPosArray[i], (snowFlakeYPosArray[i]+frameCount*snowFlakeSpeedArray[i])%(height+100), size, size);
   }
 
