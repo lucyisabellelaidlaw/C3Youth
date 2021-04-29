@@ -129,7 +129,6 @@ function snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedAr
   fill(255);
   for(let i = 0; i < 20; i++) {
     size = snowFlakeSizeArray[i];
-    rotate(frameCount%360);
     image(img, snowFlakeXPosArray[i], (snowFlakeYPosArray[i]+frameCount*snowFlakeSpeedArray[i])%(height+100), size, size);
   }
 
