@@ -9,6 +9,7 @@ function setup() {
   img = loadImage('white_snowflake.png');
   oval_img = loadImage('Oval_.png');
   alarm_font = loadFont('alarm clock.ttf');
+  mount_img = loadImage('mountains.png');
 }
 
 function draw() {
@@ -30,6 +31,8 @@ function draw() {
   textSize(70);
   //image(oval_img, width/2, height/2);
 
+  image(mount_img, 0, height-364);
+
   snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
 
   textFont(alarm_font);
@@ -38,7 +41,7 @@ function draw() {
 
   let my_string = time_array[0] + ":" + time_array[1] + ":" + time_array[2] + ":" + time_array[3];
 
-  
+
   fill(color(70, 250, 128));
   text(my_string, width/2, height/2);
 
