@@ -21,7 +21,8 @@ function draw() {
   let snowFlakeSpeedArray = [0.9, 1, 1, 2, 1.5, 2.5, 2.3, 1.25, 0.95, 1.2, 2.1, 3.1, 2.05, 1.4, 1.2, 0.2, 1.6, 1.95, 2.5, 0.9];
 
   background(color(68,91,214));
-
+  fill(color(68, 9`, 214));
+  rect(0, height/2+200, width, 50);
   button = createButton('REGO HERE');
   button.position(mouseX-50, height/2+200);
   button.size(100, 30);
