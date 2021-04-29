@@ -7,6 +7,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   img = loadImage('white_snowflake.png');
+  oval_img = loadImage('oval.png');
 }
 
 function draw() {
@@ -24,6 +25,8 @@ function draw() {
   let h = hour();
   let d = day();
   let mo = month();
+
+  image(oval_img, width/2, height/2);
 
   snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
 
