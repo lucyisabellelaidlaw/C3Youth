@@ -7,7 +7,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
   img = loadImage('white_snowflake.png');
-  oval_img = loadImage('Oval.png');
+  oval_img = loadImage('Oval_.png');
 }
 
 function draw() {
