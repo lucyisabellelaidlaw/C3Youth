@@ -27,21 +27,21 @@ function draw() {
   let d = day();
   let mo = month();
 
+  textSize(70);
   //image(oval_img, width/2, height/2);
 
   snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
 
   textFont(alarm_font);
   textAlign(CENTER);
-  fill(255);
   let time_array = getTimeDifference(mo, d, h, m, s);
 
   let my_string = time_array[0] + ":" + time_array[1] + ":" + time_array[2] + ":" + time_array[3];
 
-
-
-  textSize(70);
+  fill(255);
   text(my_string, width/2, height/2);
+  fill(color(70, 250, 128));
+  text(my_string, width/2+1; height/2+1);
 
 
 
