@@ -49,9 +49,8 @@ function draw() {
 
   fill(color(70, 250, 128));
   text(my_string, width/2, height/2);
-  textSize(30);
-  textAlign(LEFT);
-  text("days till winter camp.", width/2, height/2+40);
+
+
 
 
 
