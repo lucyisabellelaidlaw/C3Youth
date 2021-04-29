@@ -31,10 +31,10 @@ function draw() {
   textSize(70);
   //image(oval_img, width/2, height/2);
 
-  image(mount_img, 0, height-(364/2), 748/2, 364/2);
-  image(mount_img, width-748/2, height-350, 748*0.8, 364*0.8);
-  image(mount_img, 200, height-200, 748/2, 364/2);
-  image(mount_img, width-400, height-100, 748*0.7, 364*0.7);
+  image(mount_img, 0, height-(364*0.8), 748*0.8, 364*0.8);
+  image(mount_img, 200, height-364/2, 748/2, 364/2);
+  image(mount_img, width-748*0.8, height-364*0.8, 748*0.8, 364*0.8);
+  image(mount_img, width-748*0.6-150, height-365*0.6, 748*0.6, 364*0.6);
 
   snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
 
