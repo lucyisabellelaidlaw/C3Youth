@@ -27,7 +27,7 @@ function draw() {
   let d = day();
   let mo = month();
 
-  image(oval_img, width/2, height/2);
+  //image(oval_img, width/2, height/2);
 
   snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
 
@@ -36,11 +36,11 @@ function draw() {
   fill(255);
   let time_array = getTimeDifference(mo, d, h, m, s);
 
-  let my_string = time_array[0] + " : " + time_array[1] + " : " + time_array[2] + " : " + time_array[3];
+  let my_string = time_array[0] + ":" + time_array[1] + ":" + time_array[2] + ":" + time_array[3];
 
 
 
-  textSize(38);
+  textSize(40);
   text(my_string, width/2, height/2);
 
 
