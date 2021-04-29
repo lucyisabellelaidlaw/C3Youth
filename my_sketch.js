@@ -38,7 +38,7 @@ function draw() {
   image(mount_img, width-748*0.8/2, height-364*0.8+50, 748*0.8, 364*0.8);
   image(mount_img, width-748*0.6/2-150, height-365*0.6+50, 748*0.6, 364*0.6);
 
-  
+
 
   textFont(alarm_font);
   textAlign(CENTER);
@@ -49,6 +49,9 @@ function draw() {
 
   fill(color(70, 250, 128));
   text(my_string, width/2, height/2);
+  textSize(30);
+  textAlign(LEFT);
+  text("days till winter camp.", width/2, height/2+40);
 
 
 
