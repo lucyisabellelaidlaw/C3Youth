@@ -40,7 +40,7 @@ function draw() {
 
 
 
-  textSize(40);
+  textSize(70);
   text(my_string, width/2, height/2);
 
 
