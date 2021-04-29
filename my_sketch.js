@@ -38,10 +38,9 @@ function draw() {
 
   let my_string = time_array[0] + ":" + time_array[1] + ":" + time_array[2] + ":" + time_array[3];
 
-  fill(255);
-  text(my_string, width/2, height/2);
+  
   fill(color(70, 250, 128));
-  text(my_string, width/2+2, height/2+2);
+  text(my_string, width/2, height/2);
 
 
 
