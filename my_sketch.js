@@ -6,7 +6,7 @@ let snowFlakeSizeArray = [5, 10, 5, 20, 10, 10, 20, 20, 30, 50, 10, 10, 5, 20, 1
 function setup() {
   createCanvas(windowWidth, windowHeight);
 
-  img = loadImage('white_snowflake.png');
+  img = loadImage('winterCampImage.png');
 }
 
 function draw() {
