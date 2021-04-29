@@ -31,12 +31,14 @@ function draw() {
   textSize(70);
   //image(oval_img, width/2, height/2);
 
+  snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
+
   image(mount_img, -364*0.8/2, height-(364*0.8)+50, 748*0.8, 364*0.8);
   image(mount_img, 150, height-364/2+50, 748/2, 364/2);
   image(mount_img, width-748*0.8/2, height-364*0.8+50, 748*0.8, 364*0.8);
   image(mount_img, width-748*0.6/2-150, height-365*0.6+50, 748*0.6, 364*0.6);
 
-  snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
+  
 
   textFont(alarm_font);
   textAlign(CENTER);
