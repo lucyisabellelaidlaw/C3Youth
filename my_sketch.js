@@ -41,7 +41,7 @@ function draw() {
   fill(255);
   text(my_string, width/2, height/2);
   fill(color(70, 250, 128));
-  text(my_string, width/2+1, height/2+1);
+  text(my_string, width/2+3, height/2+3);
 
 
 
