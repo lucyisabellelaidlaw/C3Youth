@@ -25,6 +25,8 @@ function draw() {
   let d = day();
   let mo = month();
 
+  snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
+
   textAlign(CENTER);
   fill(255);
   let time_array = getTimeDifference(mo, d, h, m, s);
@@ -40,8 +42,7 @@ function draw() {
 
   //Snowflake Time
 
-  snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
-
+  
 }
 
 function getTimeDifference(mo, d, h, m , s) {
