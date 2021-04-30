@@ -40,13 +40,14 @@ function draw() {
 
   textSize(70);
 
-  let d = dist(mouseX, mouseY, snowFlakeXPosArray[i], snowFlakeYPosArray[i]);
-
-  if(d<7) {
-    snowFlakeYPosArray[i] = -50;
-  }
+  
 
   for(let i = 0; i < 20; i++) {
+    let d = dist(mouseX, mouseY, snowFlakeXPosArray[i], snowFlakeYPosArray[i]);
+
+    if(d<7) {
+      snowFlakeYPosArray[i] = -50;
+    }
     snowFlakesFall(i);
   }
 
