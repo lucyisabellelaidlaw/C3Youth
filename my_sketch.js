@@ -158,6 +158,12 @@ function snowFlakesFall(i) {
     snowFlakeXPosArray[i] = random(width);
   }
 
+  let d = dist(mouseX, mouseY, snowFlakeXPosArray[i], snowFlakeYPosArray[i]);
+
+  if(d<7) {
+    snowFlakeYPosArray[i] = -50;
+  }
+
 }
 
 
