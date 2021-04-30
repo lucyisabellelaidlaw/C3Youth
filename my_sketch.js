@@ -2,10 +2,19 @@ let snow_y = 0;
 
 let snowFlakeSizeArray = [10, 35, 10, 40, 20, 20, 10, 40, 10, 35, 10, 20, 10, 40, 20, 20, 10, 10, 60, 20];
 
+let snowFlakeYPosArray = [-20, -100, -30, -200, -50, -60, -220, -70, -80, -25, -110, -40, -55, -240, -15, -57, -84, -90, -190, -205]
+
+let snowFlakeXPosArray = [];
+
+let snowFlakeSpeedArray = [1.1, 2.2, 0.6, 0.5, 1.3, 1.2, 2.1, 2, 2.2, 0.45, 0.5, 0.58, 0.8, 0.9, 2, 0.5, 1.2, 1.5, 1, 2];
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   angleMode(DEGREES);
+  let spacing = windowWidth/10;
+  snowFlakeXPosArray = [0,spacing, spacing+spacing/2, 2*spacing-spacing/2, 2*spacing, 3*spacing, 3*spacing+spacing/5, 4*spacing, 4*spacing+spacing/2, windowWidth/2, 6*spacing, 6*spacing+spacing/3, 7*spacing, 8*spacing, 8*spacing+spacing/2, 8*spacing + spacing/2 +spacing/3, spacing*9, spacing*9+spacing/2, spacing*9+spacing/5, windowWidth];
+
+
   img = loadImage('white_snowflake.png');
   oval_img = loadImage('Oval_.png');
   alarm_font = loadFont('alarm clock.ttf');
@@ -13,12 +22,6 @@ function setup() {
 }
 
 function draw() {
-  let spacing = windowWidth/10
-  let snowFlakeXPosArray = [0,spacing, spacing+spacing/2, 2*spacing-spacing/2, 2*spacing, 3*spacing, 3*spacing+spacing/5, 4*spacing, 4*spacing+spacing/2, windowWidth/2, 6*spacing, 6*spacing+spacing/3, 7*spacing, 8*spacing, 8*spacing+spacing/2, 8*spacing + spacing/2 +spacing/3, spacing*9, spacing*9+spacing/2, spacing*9+spacing/5, windowWidth];
-
-  let snowFlakeYPosArray = [-20, -100, -30, -200, -50, -60, -220, -70, -80, -25, -110, -40, -55, -240, -15, -57, -84, -90, -190, -205]
-
-  let snowFlakeSpeedArray = [0.9, 1, 1, 2, 1.5, 2.5, 2.3, 1.25, 0.95, 1.2, 2.1, 3.1, 2.05, 1.4, 1.2, 0.2, 1.6, 1.95, 2.5, 0.9];
 
   background(color(68,91,214));
 
@@ -36,9 +39,11 @@ function draw() {
   let mo = month();
 
   textSize(70);
-  //image(oval_img, width/2, height/2);
 
-  snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray);
+  for(let i = 0; i < 20; i++) {
+    snowFlakesFall(i);
+  }
+
 
   image(mount_img, -364*0.8/2, height-(364*0.8)+50, 748*0.8, 364*0.8);
   image(mount_img, 150, height-364/2+50, 748/2, 364/2);
@@ -59,9 +64,6 @@ function draw() {
   textSize(20);
   text("days till winter camp.", width/2, height/2+30);
 
-
-
-
 }
 
 function getTimeDifference(mo, d, h, m , s) {
@@ -69,7 +71,7 @@ function getTimeDifference(mo, d, h, m , s) {
 
   let days = 0;
 
-  let hours =0 ;
+  let hours = 0 ;
 
   let minutes = 0;
 
@@ -144,16 +146,23 @@ function daysTillJuly4(d, mo) {
   return july4 - today;
 }
 
-function snowFlakesFall(snowFlakeXPosArray, snowFlakeYPosArray, snowFlakeSpeedArray) {
-  let size = 0;
-  noStroke();
-  fill(255);
-  for(let i = 0; i < 20; i++) {
-    size = snowFlakeSizeArray[i];
-    image(img, snowFlakeXPosArray[i], ((snowFlakeYPosArray[i]-100)+frameCount*snowFlakeSpeedArray[i])%(height+100), size, size);
+
+
+function snowFlakesFall(i) {
+
+  image(img, snowFlakeXPosArray[i], snowFlakeYPosArray[i], snowFlakeSizeArray[i]);
+  snowFlakeYPosArray[i] = snowFlakeYPosArray[i] + snowFlakeSpeedArray[i];
+
+  if(snowFlakeYPosArray[i] > height+50) {
+    snowFlakeYPosArray[i] = -100;
+    snowFlakeXPosArray[i] = random(width);
   }
 
 }
+
+
+
+
 
 function goToLink() {
   window.open("https://c3syd.brushfire.com/wintercamp/467720");
