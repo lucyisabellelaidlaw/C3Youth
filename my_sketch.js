@@ -150,7 +150,7 @@ function daysTillJuly4(d, mo) {
 
 function snowFlakesFall(i) {
 
-  image(img, snowFlakeXPosArray[i], snowFlakeYPosArray[i], snowFlakeSizeArray[i]);
+  image(img, snowFlakeXPosArray[i], snowFlakeYPosArray[i], snowFlakeSizeArray[i], snowFlakeSizeArray[i]);
   snowFlakeYPosArray[i] = snowFlakeYPosArray[i] + snowFlakeSpeedArray[i];
 
   if(snowFlakeYPosArray[i] > height+50) {
